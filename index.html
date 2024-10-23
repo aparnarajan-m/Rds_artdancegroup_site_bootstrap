@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,21 +12,25 @@
         crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-
-    <!-- <style>
-        .navbar-custom {
+    <style>
+        /* .navbar-custom {
             background-color: #111;
-            /* Dark background */
+        } */
+        .firstPage{
+            width: 100vw;
+            height: 100vh;
+            background-image: url(assets/main-bg-img.jpg);
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-size: cover;
+        }
+        .navbar-brand img {
+            height: 43px;
         }
 
-        .navbar-brand img {
-            height: 50px;
-            /* Adjust logo size */
-        }
         .btn-schedule {
             background: linear-gradient(45deg, #f72585, #7209b7);
             color: white;
-            border-radius: 25px;
             padding: 10px 20px;
         }
 
@@ -53,65 +57,83 @@
         .navbar-icons i:hover {
             color: #f72585;
         }
-    </style> -->
+        .img-fluid{
+            width: 20%;
+        }
+    </style>
 
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="assets/logo-rdsag.svg" alt="RDS Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Courses and classes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Groups</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Lectors</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Eshop</a>
-                    </li>
-                </ul>
-                <div class="navbar-icons d-flex align-items-center">
-                    <!-- Social Media Icons -->
-                    <!-- <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a> -->
-                    <!-- Search, User, Cart Icons -->
-                    <i class="fas fa-search"></i>
-                    <i class="fas fa-user"></i>
-                    <i class="fas fa-shopping-cart"></i>
-                    <!-- Language Dropdown -->
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+    <div class="firstPage">
+        <nav class="navbar navbar-expand-lg  text-white d-flex flex-column">
+            <div class="">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/logo-rdsag.svg" alt="RDS Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Courses and classes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Groups</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Lectors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Eshop</a>
+                        </li>
+                    </ul>
+                    <div class="navbar-icons d-flex align-items-center">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle text-white" type="button" data-bs-toggle="dropdown">
                             EN
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">EN</a></li>
-                            <li><a class="dropdown-item" href="#">SK</a></li>
-                        </ul>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">EN</a></li>
+                                <li><a class="dropdown-item" href="#">SK</a></li>
+                            </ul>
+                        </div>
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-user"></i>
+                        <i class="fas fa-shopping-cart"></i>
+                        <button class="btn btn-schedule ms-3">Schedule</button>
                     </div>
-                    <!-- Schedule Button -->
-                    <a href="#" class="btn btn-schedule ms-3">Schedule</a>
                 </div>
             </div>
+        </nav>
+
+        <div class="d-flex flex-column">
+            <img class="img-fluid" src="assets/logo-rdsag.svg" alt="">
+            <div class="d-flex">
+                <div>
+                    <h1>Welcome to the World of Art!</h1>
+                    <p>One of a kind place in the centre of Bratislava – dancing, singing, acting,<br> fitness and
+                    Slovak Dance Theatre – everything under one roof!</p>
+                </div>
+                <img src="assets/msg.png" alt="">
+            </div>
         </div>
-    </nav>
+    </div>
 </body>
 
-</html>
+</html> 
+
+ 
+
+
+ 
