@@ -17,7 +17,7 @@
 <body>
     <div class="main-container ">
         <div class="page1">
-            <nav class="nav navbar navbar-expand-lg text-white d-flex flex-column p-3 sticky-top mb-2">
+            <nav id="navbar" class="nav navbar navbar-expand-lg text-white d-flex flex-column p-3 fixed-top mb-2">
                 <div class="container">
                     <a class="navbar-brand" href="#">
                         <img src="assets/logo-rdsag.svg" alt="RDS Logo">
@@ -63,17 +63,17 @@
                 </div>
             </nav>
 
-            <div class="d-flex flex-column">
-                <div class="content d-flex flex-column align-items-center ">
-                    <img class="img-fluid mb-4" src="assets/logo-rdsag.svg" alt="">
-                    <div class="d-flex align-items-center text-center">
+            <div class="d-flex flex-column ">
+                <div class="content d-flex flex-column align-items-center mt-5">
+                    <img class="img-fluid mb-4 mt-5" src="assets/logo-rdsag.svg" alt="">
+                    <div class="d-flex align-items-center text-center position-relative">
                         <div class="text-white mb-2">
                             <h1 class="welcome fs-1 fw-bold font-weight-bolder mt-4 mb-4 fs-1">Welcome to the World of Art!</h1>
                             <p class="font-weight-lighter mb-5 fs-4">One of a kind place in the centre of Bratislava –
                                 dancing, singing, acting,<br> fitness and
                                 Slovak Dance Theatre – everything under one roof!</p>
                         </div>
-                        <img class="msg-img " src="assets/msg.png" alt="">
+                        <img class="msg-img mb-5" src="assets/msg.png" alt="">
                     </div>
                     <div class="cards d-flex gap-2">
                         <div class="card1 d-flex align-items-center justify-content-center rounded-4"><img
@@ -89,7 +89,7 @@
                     </div>
                 </div>
                 <div>
-                    <h6 class="text-white">Cookies</h6>
+                    <h6 class="text-white fixed-bottom">Cookies</h6>
                 </div>
             </div>
         </div>
@@ -124,6 +124,17 @@
         </footer>
 
     </div>
+    <script>
+        window.addEventListener("scroll", function () {
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY > 50) {  // Adjust this value to control when the color changes
+        navbar.classList.add("navbar-scrolled");
+    } else {
+        navbar.classList.remove("navbar-scrolled");
+    }
+});
+
+    </script>
 </body>
 
 </html>
